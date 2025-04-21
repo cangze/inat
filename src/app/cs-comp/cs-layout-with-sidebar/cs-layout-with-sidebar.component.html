@@ -1,16 +1,25 @@
-<div class="cs-home">
-    <div nz-row class="cs-home-main-content">
-      
-      <!-- 左侧导航栏 -->
-      <div nz-col nzSpan="5" class="cs-home-left">
-        <!-- 通过当前路由生成一个只有一级菜单的导航栏，数据从路由中取 -->
-      </div>
-  
-      <!-- 右侧内容显示 -->
-      <div nz-col nzSpan="19" class="cs-home-right">
-        <router-outlet></router-outlet>
-      </div>
-  
+<div class="cs-layout-with-sidebar">
+  <div nz-row class="cs-layout-with-sidebar-content" >
+    
+    <!-- 左侧菜单栏 -->
+    
+    <div nz-col nzSpan="5" class="cs-layout-with-sidebar-left">
+      <div class="side-menu-title">{{ menuTitle }}</div>
+      <ul class="side-menu">
+        <li *ngFor="let item of menuList"
+            [class.active]="currentPath === item.path"
+            (click)="navigateTo(item.path)">
+            <span nz-icon nzType="double-right" class="arrow-icon" nzTheme="outline"></span>
+          {{ item.label }}
+        </li>
+      </ul>
+    </div>
+    
+    
+
+    <!-- 右侧内容展示区域 -->
+    <div nz-col nzSpan="19" class="cs-layout-with-sidebar-right">
+      <router-outlet></router-outlet>
     </div>
   </div>
-  
+</div>

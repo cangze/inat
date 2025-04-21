@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { CsLayoutWithSidebarComponent } from './cs-comp/cs-layout-with-sidebar/cs-layout-with-sidebar.component';
 import { CsErrorComponent } from './cs-comp/cs-error/cs-error.component';
 import { CsMainComponent } from './cs-comp/cs-main/cs-main.component';
+import { CsFounderComponent } from './cs-page/cs-founder/cs-founder.component';
 // ... 其他组件导入略
 
 export const routes: Routes = [
@@ -13,7 +14,7 @@ export const routes: Routes = [
       data: { breadcrumb: '课题组简介' },
       children: [
         { path: '', redirectTo: 'founder', pathMatch: 'full' }, // 👈 默认跳转到 founder
-        { path: 'founder', component: CsErrorComponent, data: { breadcrumb: '创始人' } },
+        { path: 'founder', component: CsFounderComponent, data: { breadcrumb: '创始人' } },
         { path: 'intro', component: CsErrorComponent, data: { breadcrumb: '简介' } },
         { path: 'direction', component: CsErrorComponent, data: { breadcrumb: '研究方向' } },
         { path: 'projects', component: CsErrorComponent, data: { breadcrumb: '承担项目' } },

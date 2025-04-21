@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { NzBreadCrumbModule } from 'ng-zorro-antd/breadcrumb';
-
+import { NzIconModule } from 'ng-zorro-antd/icon';
 @Component({
   selector: 'cs-router-path',
   standalone: true,
-  imports: [CommonModule, RouterModule, NzBreadCrumbModule],
+  imports: [CommonModule, RouterModule, NzBreadCrumbModule,NzIconModule],
   templateUrl: './cs-router-path.component.html',
   styleUrls: ['./cs-router-path.component.less']
 })

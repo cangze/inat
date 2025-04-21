@@ -30,7 +30,7 @@
             首页
           </li>
       
-          <li nz-submenu nzTitle="课题组简介">
+          <li nz-submenu nzTitle="课题组简介" (click)="goToPage('introduction/founder')">
             <ul>
               <li nz-menu-item (click)="goToPage('introduction/founder')">创始人</li>
               <li nz-menu-item (click)="goToPage('introduction/intro')">简介</li>
@@ -40,7 +40,7 @@
             </ul>
           </li>
       
-          <li nz-submenu nzTitle="研究人员">
+          <li nz-submenu nzTitle="研究人员" (click)="goToPage('members/all')">
             <ul>
               <li nz-menu-item (click)="goToPage('members/all')">研究人员</li>
               <li nz-menu-item (click)="goToPage('members/phd')">博士研究生</li>
@@ -49,7 +49,7 @@
             </ul>
           </li>
       
-          <li nz-submenu nzTitle="研究成果">
+          <li nz-submenu nzTitle="研究成果" (click)="goToPage('results/papers')">
             <ul>
               <li nz-menu-item (click)="goToPage('results/papers')">文章</li>
               <li nz-menu-item (click)="goToPage('results/patents')">专利</li>
@@ -58,7 +58,7 @@
             </ul>
           </li>
       
-          <li nz-submenu nzTitle="课题组建设">
+          <li nz-submenu nzTitle="课题组建设" (click)="goToPage('construction/news')">
             <ul>
               <li nz-menu-item (click)="goToPage('construction/news')">新闻</li>
               <li nz-menu-item (click)="goToPage('construction/academic')">学术动态</li>
@@ -67,7 +67,7 @@
             </ul>
           </li>
       
-          <li nz-submenu nzTitle="加入我们">
+          <li nz-submenu nzTitle="加入我们" (click)="goToPage('join/faculty')">
             <ul>
               <li nz-menu-item (click)="goToPage('join/faculty')">教师</li>
               <li nz-menu-item (click)="goToPage('join/postgraduate')">研究生</li>
