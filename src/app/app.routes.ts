@@ -1,8 +1,7 @@
 import { Routes } from '@angular/router';
 import { CsLayoutWithSidebarComponent } from './cs-comp/cs-layout-with-sidebar/cs-layout-with-sidebar.component';
-import { CsErrorComponent } from './cs-comp/cs-error/cs-error.component';
 import { CsMainComponent } from './cs-comp/cs-main/cs-main.component';
-import { CsFounderComponent } from './cs-page/cs-founder/cs-founder.component';
+import { CsFrameComponent } from './cs-comp/cs-frame/cs-frame.component';
 // ... 其他组件导入略
 
 export const routes: Routes = [
@@ -14,11 +13,11 @@ export const routes: Routes = [
       data: { breadcrumb: '课题组简介' },
       children: [
         { path: '', redirectTo: 'founder', pathMatch: 'full' }, // 👈 默认跳转到 founder
-        { path: 'founder', component: CsFounderComponent, data: { breadcrumb: '创始人' } },
-        { path: 'intro', component: CsErrorComponent, data: { breadcrumb: '简介' } },
-        { path: 'direction', component: CsErrorComponent, data: { breadcrumb: '研究方向' } },
-        { path: 'projects', component: CsErrorComponent, data: { breadcrumb: '承担项目' } },
-        { path: 'conditions', component: CsErrorComponent, data: { breadcrumb: '研究条件' } }
+        { path: 'founder', component: CsFrameComponent, data: { breadcrumb: '创始人',src : 'founder' } },
+        { path: 'intro', component: CsFrameComponent, data: { breadcrumb: '简介' } },
+        { path: 'direction', component: CsFrameComponent, data: { breadcrumb: '研究方向' } },
+        { path: 'projects', component: CsFrameComponent, data: { breadcrumb: '承担项目' } },
+        { path: 'conditions', component: CsFrameComponent, data: { breadcrumb: '研究条件' } }
       ]
     },
     {
@@ -27,10 +26,10 @@ export const routes: Routes = [
       component: CsLayoutWithSidebarComponent,
       children: [
         { path: '', redirectTo: 'all', pathMatch: 'full' }, // 👈 默认跳转
-        { path: 'all', component: CsErrorComponent, data: { breadcrumb: '研究人员' } },
-        { path: 'phd', component: CsErrorComponent, data: { breadcrumb: '博士研究生' } },
-        { path: 'master', component: CsErrorComponent, data: { breadcrumb: '硕士研究生' } },
-        { path: 'alumni', component: CsErrorComponent, data: { breadcrumb: '往届成员' } }
+        { path: 'all', component: CsFrameComponent, data: { breadcrumb: '研究人员' } },
+        { path: 'phd', component: CsFrameComponent, data: { breadcrumb: '博士研究生' } },
+        { path: 'master', component: CsFrameComponent, data: { breadcrumb: '硕士研究生' } },
+        { path: 'alumni', component: CsFrameComponent, data: { breadcrumb: '往届成员' } }
       ]
     },
     {
@@ -39,10 +38,10 @@ export const routes: Routes = [
       component: CsLayoutWithSidebarComponent,
       children: [
         { path: '', redirectTo: 'papers', pathMatch: 'full' },
-        { path: 'papers', component: CsErrorComponent, data: { breadcrumb: '文章' } },
-        { path: 'patents', component: CsErrorComponent, data: { breadcrumb: '专利' } },
-        { path: 'software', component: CsErrorComponent, data: { breadcrumb: '软件著作权' } },
-        { path: 'honors', component: CsErrorComponent, data: { breadcrumb: '荣誉' } }
+        { path: 'papers', component: CsFrameComponent, data: { breadcrumb: '文章' } },
+        { path: 'patents', component: CsFrameComponent, data: { breadcrumb: '专利' } },
+        { path: 'software', component: CsFrameComponent, data: { breadcrumb: '软件著作权' } },
+        { path: 'honors', component: CsFrameComponent, data: { breadcrumb: '荣誉' } }
       ]
     },
     {
@@ -51,10 +50,10 @@ export const routes: Routes = [
       component: CsLayoutWithSidebarComponent,
       children: [
         { path: '', redirectTo: 'news', pathMatch: 'full' },
-        { path: 'news', component: CsErrorComponent, data: { breadcrumb: '新闻' } },
-        { path: 'academic', component: CsErrorComponent, data: { breadcrumb: '学术动态' } },
-        { path: 'meetings', component: CsErrorComponent, data: { breadcrumb: '会议通知' } },
-        { path: 'lab-apply', component: CsErrorComponent, data: { breadcrumb: '实验室使用申请' } }
+        { path: 'news', component: CsFrameComponent, data: { breadcrumb: '新闻' } },
+        { path: 'academic', component: CsFrameComponent, data: { breadcrumb: '学术动态' } },
+        { path: 'meetings', component: CsFrameComponent, data: { breadcrumb: '会议通知' } },
+        { path: 'lab-apply', component: CsFrameComponent, data: { breadcrumb: '实验室使用申请' } }
       ]
     },
     {
@@ -63,9 +62,9 @@ export const routes: Routes = [
       component: CsLayoutWithSidebarComponent,
       children: [
         { path: '', redirectTo: 'faculty', pathMatch: 'full' },
-        { path: 'faculty', component: CsErrorComponent, data: { breadcrumb: '教师' } },
-        { path: 'postgraduate', component: CsErrorComponent, data: { breadcrumb: '研究生' } },
-        { path: 'assistant', component: CsErrorComponent, data: { breadcrumb: '本科生实验助理' } }
+        { path: 'faculty', component: CsFrameComponent, data: { breadcrumb: '教师' } },
+        { path: 'postgraduate', component: CsFrameComponent, data: { breadcrumb: '研究生' } },
+        { path: 'assistant', component: CsFrameComponent, data: { breadcrumb: '本科生实验助理' } }
       ]
     }
   ];

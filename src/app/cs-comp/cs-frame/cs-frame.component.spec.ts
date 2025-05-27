@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CsErrorComponent } from './cs-error.component';
+import { CsFrameComponent } from './cs-frame.component';
 
-describe('CsErrorComponent', () => {
-  let component: CsErrorComponent;
-  let fixture: ComponentFixture<CsErrorComponent>;
+describe('CsFrameComponent', () => {
+  let component: CsFrameComponent;
+  let fixture: ComponentFixture<CsFrameComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [CsErrorComponent]
+      imports: [CsFrameComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(CsErrorComponent);
+    fixture = TestBed.createComponent(CsFrameComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
